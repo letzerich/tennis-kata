@@ -2,8 +2,8 @@ package com.pairgood;
 
 public class TennisScorer {
 
-    private int serverScore = 0;
-    private int receiverScore = 0;
+    private int serverScore;
+    private int receiverScore;
 
     public TennisScorer(int serverScore, int receiverScore) {
         this.serverScore = serverScore;
@@ -19,7 +19,11 @@ public class TennisScorer {
     }
 
     public void serverWon() {
-        serverScore += 15;
+        if(serverScore == 30){
+            serverScore += 10;
+        }else{
+            serverScore += 15;
+        }
     }
 
     public void receiverWon() {
