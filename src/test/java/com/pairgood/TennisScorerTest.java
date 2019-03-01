@@ -69,4 +69,17 @@ public class TennisScorerTest {
         Assert.assertEquals("40", scorer.getServerScore());
         Assert.assertEquals("40", scorer.getReceiverScore());
     }
+
+    @Test
+    public void serverWon_GivenFortyThirty_WhenServerWinsPoint_ThenServerWinsGame(){
+        TennisScorer scorer = new TennisScorer(40, 30);
+
+        Assert.assertEquals("40", scorer.getServerScore());
+        Assert.assertEquals("30", scorer.getReceiverScore());
+
+        scorer.serverWon();
+
+        Assert.assertEquals("wins", scorer.getServerScore());
+        Assert.assertEquals("30", scorer.getReceiverScore());
+    }
 }

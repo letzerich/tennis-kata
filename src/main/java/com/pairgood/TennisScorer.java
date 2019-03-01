@@ -12,6 +12,11 @@ public class TennisScorer {
     }
 
     public String getServerScore() {
+        if(serverScore > 40 && receiverScore == 30){
+            return "wins";
+        }else {
+            
+        }
         if(serverScore > 40){
             return "A";
         }
