@@ -19,7 +19,7 @@ public class TennisScorerTest {
     }
 
     @Test
-    public void serverWon_GivenFifteenFifteen_WhenReceiverWinsPoint_ThenScoreIsFifteenThirty(){
+    public void receiverWon_GivenFifteenFifteen_WhenReceiverWinsPoint_ThenScoreIsFifteenThirty(){
         TennisScorer scorer = new TennisScorer(15, 15);
 
         Assert.assertEquals("15", scorer.getServerScore());
